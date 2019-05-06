@@ -1,7 +1,7 @@
 {
   "orgName": "patmcclellan Company",
   "edition": "Developer",
-  "features": "DebugApex",
+  "features": ["DebugApex"],
   "settings": {
     "orgPreferenceSettings": {
       "s1DesktopEnabled": true
