@@ -4,7 +4,9 @@
             <template if:true={showIcon}>
                 <lightning-icon icon-name={selectedIcon} class="slds-p-right_large"></lightning-icon>
             </template> 
-            {iconName}
+            <div class="slds-p-left_medium">
+                {iconName}
+            </div>
         </h3>
         <div slot="footer">
                 <lightning-badge label="Tag1"></lightning-badge>

@@ -8,6 +8,6 @@ export default class LevelOne extends LightningElement {
     @api whichObject;
 
     get selectedIcon(){
-        return 'standard:' + this.iconName;
+        return 'standard:' + this.iconName.toLowerCase();
     }
 }
