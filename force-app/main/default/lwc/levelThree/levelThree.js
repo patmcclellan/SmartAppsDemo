@@ -9,5 +9,6 @@ export default class LevelThree extends LightningElement {
     get colorspec(){
         return this.whatColor.toLowerCase();
     }
+    
 
 }
