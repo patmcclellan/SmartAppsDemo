@@ -2,19 +2,17 @@
     <lightning-card>
         <h1 slot="title">
             <template if:true={showIcon}>
-                <lightning-icon icon-name={selectedIcon}></lightning-icon>
+                <lightning-icon icon-name="standard:address"></lightning-icon>
                 &nbsp; 
             </template> 
-            Level One
+            Proton Text Container Component
         </h1>
-        <p class="slds-p-horizontal_small">showIcon = {showIcon}</p>
-        <p class="slds-p-horizontal_small">selectedIcon = {selectedIcon}</p>
         <lightning-layout horizontal-align="spread" class="slds-p-around_small">
             <lightning-layout-item class={colorspec}>
                 {whatColor}
             </lightning-layout-item>
             <lightning-layout-item>
-                Object: {whichObject}
+                Tab: {whichObject}
             </lightning-layout-item>
             <lightning-layout-item>
                 <template if:true={isRecordPage}>

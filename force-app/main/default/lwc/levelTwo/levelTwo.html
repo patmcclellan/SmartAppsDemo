@@ -1,22 +1,14 @@
 <template>
     <div class="slds-box slds-theme_shade slds-p-around_small">
         <h1 class="slds-p-bottom_medium">
-            Level Two
+            Conversation List Component
         </h1>
-
-        <lightning-layout horizontal-align="spread" class="slds-p-around_small">
-            <lightning-layout-item class={colorspec}>
-                {whatColor}
-            </lightning-layout-item>
-            <lightning-layout-item>
-                Object: {whichObject}
-            </lightning-layout-item>
-            <lightning-layout-item>
-                <template if:true={isRecordPage}>
-                    recordId: {recordId}
-                </template>
-            </lightning-layout-item>
-        </lightning-layout>
+        <div class="slds-p-around_small">
+            <p>This component doesn't dispay the talk bubble color, it just passes them down to a nested component.</p>
+            <template if:true={isRecordPage}>
+                <p>The component receives recordId ({recordId}) from its parent, and uses it in a call to Apex to get related conversations. </p>
+            </template>
+        </div>
 
         <lightning-button name="showLevelThree" label="Level 3" onclick={toggleLevelThree} class="slds-p-around_small"></lightning-button>
         
