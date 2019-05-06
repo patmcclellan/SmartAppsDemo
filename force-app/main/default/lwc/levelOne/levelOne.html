@@ -6,12 +6,20 @@
             </template> 
             Level One
         </h1>
-        
         <p class="slds-p-horizontal_small">showIcon = {showIcon}</p>
         <p class="slds-p-horizontal_small">selectedIcon = {selectedIcon}</p>
-        <p class={colorspec}>{whatColor}</p>
-        <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
-        <p class="slds-p-horizontal_small">recordId: {recordId}</p>
+        <lightning-layout horizontal-align="spread">
+            <lightning-layout-item class={colorspec}>
+                {whatColor}
+            </lightning-layout-item>
+            <lightning-layout-item>
+                Object Link: {whichObject}
+            </lightning-layout-item>
+            <lighting-layout-item>
+                recordId: {recordId}
+            </lighting-layout-item>
+        </lightning-layout>
+        
 
         <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_medium"></lightning-button>
         
