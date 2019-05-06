@@ -11,6 +11,10 @@ export default class LevelTwo extends LightningElement {
         return this.whatColor.toLowerCase();
     }
 
+    get hasRecordId(){
+        return this.recordId.length > 0;
+    }
+
     toggleLevelThree(){
         this.showLevelThree = !this.showLevelThree;
     }

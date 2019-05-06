@@ -9,6 +9,10 @@ export default class LevelThree extends LightningElement {
     get colorspec(){
         return this.whatColor.toLowerCase();
     }
+
+    get hasRecordId(){
+        return this.recordId.length > 0;
+    }
     
 
 }

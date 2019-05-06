@@ -16,7 +16,9 @@
                 Object Link: {whichObject}
             </lightning-layout-item>
             <lightning-layout-item>
-                recordId: {recordId}
+                <template if:true={hasRecordId}>
+                    recordId: {recordId}
+                </template>
             </lightning-layout-item>
         </lightning-layout>
         
