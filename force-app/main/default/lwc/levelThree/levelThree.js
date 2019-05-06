@@ -17,15 +17,15 @@ export default class LevelThree extends LightningElement {
     get talkbubble(){
         switch(this.whatColor){
             case "Blue":
-                return "tri-right-Blue protonLightBlue";
+                return "talk-bubble-in round left-top shadow tri-right-Blue protonLightBlue";
             case "Yellow":
-                return "tri-right-Yello protonLightYellow";
+                return "talk-bubble-in round left-top shadow tri-right-Yello protonLightYellow";
             case "Green":
-                return "tri-right-Green protonLightGreen";
+                return "talk-bubble-in round left-top shadow tri-right-Green protonLightGreen";
             case "Purple":
-                return "tri-right-Indigo protonLightIndigo";
+                return "talk-bubble-in round left-top shadow tri-right-Indigo protonLightIndigo";
             default:
-                return "tri-right-White protonWhite";
+                return "talk-bubble-in round left-top shadow tri-right-White protonWhite";
         }
     }
     
