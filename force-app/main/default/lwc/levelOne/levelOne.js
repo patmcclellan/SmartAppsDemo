@@ -7,5 +7,7 @@ export default class LevelOne extends LightningElement {
     @api whatColor;
     @api whichObject;
 
-    
+    get selectedIcon(){
+        return 'standard:' + this.iconName;
+    }
 }
