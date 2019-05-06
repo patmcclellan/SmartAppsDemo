@@ -18,7 +18,7 @@ export default class LevelOne extends LightningElement {
     }
 
     get isRecordPage(){
-        return this.recordId.length > 0;
+        return typeof this.recordId !== "undefined";
     }
 
     toggleLevelTwo(){
