@@ -1,11 +1,11 @@
 <template>
     <lightning-card>
-        <h3 slot="title">
+        <h1 slot="title">
             <template if:true={showIcon}>
                 <lightning-icon icon-name={selectedIcon}></lightning-icon>
             </template> 
             {iconName}
-        </h3>
+        </h1>
         <div slot="footer">
                 <lightning-badge label="Tag1"></lightning-badge>
                 <lightning-badge label="Tag2"></lightning-badge>
