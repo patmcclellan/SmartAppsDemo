@@ -5,6 +5,7 @@
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
 
         <lightning-button name="showLevelThree" label="Level 3" variant="brand" onclick={toggleLevelThree}></lightning-button>
+        showLevelThree: {showLevelThree}
         <template if:true={showLevelThree}>
             <c-level-three
                 record-id={recordId}
