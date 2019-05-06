@@ -10,4 +10,8 @@ export default class LevelOne extends LightningElement {
     get selectedIcon(){
         return 'standard:' + this.iconName.toLowerCase();
     }
+
+    get colorspec(){
+        return this.whatColor.toLowerCase();
+    }
 }
