@@ -16,11 +16,14 @@
         <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo} class="slds-float_right"></lightning-button>
         
         <template if:true={showLevelTwo}>
-            <c-level-two
-                record-id={recordId}
-                what-color={whatColor}
-                which-object={whichObject}>
-            </c-level-two>
+            <div class="slds-p-around_small">
+                <c-level-two
+                    record-id={recordId}
+                    what-color={whatColor}
+                    which-object={whichObject}>
+                </c-level-two>
+            </div>
+            
         </template>
     </lightning-card>
     
