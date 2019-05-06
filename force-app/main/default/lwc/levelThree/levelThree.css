@@ -32,3 +32,200 @@
     color: white;
     background-color: purple;
 }
+
+.talk-bubble-in {
+    margin-left: 7px; /*positions bubble to the left*/
+    margin-bottom: 1.5em; /*puts space between bubbles*/
+    display: inline-block;
+    position: relative;
+    max-width: 75%;
+    height: auto;
+}
+/** TALK BUBBLE TEXT **/
+
+.talktext{
+    font-size: small;
+    padding: 4px 8px;
+    text-align: left;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+.shadow{
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Right triangle placed top left flush. */
+.tri-right-Blue.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Blue.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #C7DCF4 transparent transparent transparent;
+  }
+
+.tri-right-Yellow.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Yellow.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #FEF5C2 transparent transparent transparent;
+  }
+.tri-right-Rose.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Rose.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #F9E1E3 transparent transparent transparent;
+  }
+
+.tri-right-Green.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Green.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #EBF7D4 transparent transparent transparent;
+  }
+
+.tri-right-Orange.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Orange.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #FED4B3 transparent transparent transparent;
+  }
+
+.tri-right-Indigo.border.left-top:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -40px;
+    right: auto;
+    top: -8px;
+    bottom: auto;
+    border: 32px solid;
+}
+
+.tri-right-Indigo.left-top:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -13px;
+    right: auto;
+    top: 0px;
+    bottom: auto;
+    border: 13px solid;
+    border-color: #F0E8FC transparent transparent transparent;
+}
+
+/** COLORS **/
+
+.protonLightBlue{
+    background-color: #C7DCF4;
+ }
+
+ .protonLightYellow{
+    background-color: #FEF5C2;
+ }
+
+ .protonLightGreen{
+    background-color: #EBF7D4;
+ }
+
+ .protonLightIndigo{
+    background-color: #F0E8FC;
+ }
+
+ .protonWhite{
+    background-color: #f0f0f0;
+ }
+ .protonBlue{
+      background-color: #236AB9;
+ }
