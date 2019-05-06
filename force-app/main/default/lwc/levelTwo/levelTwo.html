@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="Level Two">
+        <p class={colorspec}>{whatColor}</p>
+        <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
+        <p class="slds-p-horizontal_small">recordId: {recordId}</p>
+
+        <lightning-button name="showLevelThree" label="Level 3" variant="brand" onclick={toggleLevelThree}></lightning-button>
+        <template if:true={showLevelThree}>
+            <c-level-three
+                record-id={recordId}
+                what-color={whatColor}
+                which-object={whichObject}>
+            </c-level-three>
+        </template>
+    </lightning-card>
+</template>

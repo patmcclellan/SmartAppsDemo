@@ -1,0 +1,26 @@
+.blue {
+    width: 6rem;
+    padding-left: 0.8rem;
+    color: white;
+    background-color: blue;
+}
+
+.yellow {
+    width: 6rem;
+    padding-left: 0.8rem;
+    background-color: yellow;
+}
+
+.green {
+    width: 6rem;
+    padding-left: 0.8rem;
+    color: white;
+    background-color: green;
+}
+
+.purple {
+    width: 6rem;
+    padding-left: 0.8rem;
+    color: white;
+    background-color: purple;
+}

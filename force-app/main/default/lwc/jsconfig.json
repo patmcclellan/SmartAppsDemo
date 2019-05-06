@@ -5,6 +5,12 @@
         "paths": {
             "c/levelOne": [
                 "levelOne/levelOne.js"
+            ],
+            "c/levelTwo": [
+                "levelTwo/levelTwo.js"
+            ],
+            "c/levelThree": [
+                "levelThree/levelThree.js"
             ]
         }
     },
