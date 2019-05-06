@@ -13,7 +13,7 @@
             <property name="showIcon" label="Show Icon" type="Boolean" default="true"/>
             <property name="iconName" label="Icon Name" type="String" datasource="Address, Avatar, Event, Orders" default="Address"/>
             <property name="whatColor" label="Color Block" type="String" datasource="Blue, Yellow, Green, Purple" default="Blue"/>
-            <property name="whichObject" label="Object Link" type="String" datasource="apex://LinkedObjectList" default="None"/>
+            <property name="whichObject" label="Object" type="String" datasource="apex://LinkedObjectList" default="None"/>
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
