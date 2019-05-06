@@ -24,6 +24,10 @@
     background-color: green;
 }
 
+.h1 {
+    font-style: bold;
+}
+
 .purple {
     text-align: center;
     border: solid 1px black;
