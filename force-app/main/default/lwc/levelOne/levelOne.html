@@ -14,6 +14,7 @@
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
 
         <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo}></lightning-button>
+        
         <template if:true={showLevelTwo}>
             <c-level-two
                 record-id={recordId}
