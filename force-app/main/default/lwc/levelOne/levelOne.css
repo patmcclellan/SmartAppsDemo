@@ -1,5 +1,6 @@
 .blue {
     text-align: center;
+    border: solid 1px black;
     width: 4rem;
     padding-left: 0.25rem;
     color: white;
@@ -8,6 +9,7 @@
 
 .yellow {
     text-align: center;
+    border: solid 1px black;
     width: 4rem;
     padding-left: 0.25rem;
     background-color: yellow;
@@ -15,6 +17,7 @@
 
 .green {
     text-align: center;
+    border: solid 1px black;
     width: 4rem;
     padding-left: 0.25rem;
     color: white;
@@ -23,6 +26,7 @@
 
 .purple {
     text-align: center;
+    border: solid 1px black;
     width: 4rem;
     padding-left: 0.25rem;
     color: white;
