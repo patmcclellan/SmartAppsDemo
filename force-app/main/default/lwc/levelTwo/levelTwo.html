@@ -3,12 +3,12 @@
         <h1 class="slds-p-bottom_medium">
             Level Two
         </h1>
-        
+
         <p class={colorspec}>{whatColor}</p>
         <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
 
-        <lightning-button name="showLevelThree" label="Level 3" variant="brand" onclick={toggleLevelThree} class="slds-p-around_medium"></lightning-button>
+        <lightning-button name="showLevelThree" label="Level 3" onclick={toggleLevelThree} class="slds-p-around_medium"></lightning-button>
         
         <template if:true={showLevelThree}>
             <div class="slds-p-around_small">
