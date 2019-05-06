@@ -12,15 +12,15 @@
         <p class={colorspec}>{whatColor}</p>
         <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
-    </lightning-card>
 
-    <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo}></lightning-button>
-    <template if:true={showLevelTwo}>
-        <c-level-two
-            record-id={recordId}
-            what-color={whatColor}
-            which-object={whichObject}>
-        </c-level-two>
-    </template>
+        <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo}></lightning-button>
+        <template if:true={showLevelTwo}>
+            <c-level-two
+                record-id={recordId}
+                what-color={whatColor}
+                which-object={whichObject}>
+            </c-level-two>
+        </template>
+    </lightning-card>
     
 </template>
