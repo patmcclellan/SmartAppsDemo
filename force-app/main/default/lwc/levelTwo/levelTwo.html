@@ -7,14 +7,16 @@
         <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
 
-        <lightning-button name="showLevelThree" label="Level 3" variant="brand" onclick={toggleLevelThree} class="slds-float_right"></lightning-button>
-        showLevelThree: {showLevelThree}
+        <lightning-button name="showLevelThree" label="Level 3" variant="brand" onclick={toggleLevelThree} class="slds-p-around_medium"></lightning-button>
+        
         <template if:true={showLevelThree}>
-            <c-level-three
-                record-id={recordId}
-                what-color={whatColor}
-                which-object={whichObject}>
-            </c-level-three>
+            <div class="slds-p-around_small">
+                <c-level-three
+                    record-id={recordId}
+                    what-color={whatColor}
+                    which-object={whichObject}>
+                </c-level-three>
+            </div>
         </template>
     </div>
 </template>
