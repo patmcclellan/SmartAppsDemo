@@ -6,4 +6,6 @@ export default class LevelOne extends LightningElement {
     @api iconName;
     @api whatColor;
     @api whichObject;
+
+    
 }
