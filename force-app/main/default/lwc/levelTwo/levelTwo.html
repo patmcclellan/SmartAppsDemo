@@ -4,11 +4,19 @@
             Level Two
         </h1>
 
-        <p class={colorspec}>{whatColor}</p>
-        <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
-        <p class="slds-p-horizontal_small">recordId: {recordId}</p>
+        <lightning-layout horizontal-align="spread" class="slds-p-around_small">
+            <lightning-layout-item class={colorspec}>
+                {whatColor}
+            </lightning-layout-item>
+            <lightning-layout-item>
+                Object Link: {whichObject}
+            </lightning-layout-item>
+            <lightning-layout-item>
+                recordId: {recordId}
+            </lightning-layout-item>
+        </lightning-layout>
 
-        <lightning-button name="showLevelThree" label="Level 3" onclick={toggleLevelThree} class="slds-p-around_medium"></lightning-button>
+        <lightning-button name="showLevelThree" label="Level 3" onclick={toggleLevelThree} class="slds-p-around_small"></lightning-button>
         
         <template if:true={showLevelThree}>
             <div class="slds-p-around_small">
