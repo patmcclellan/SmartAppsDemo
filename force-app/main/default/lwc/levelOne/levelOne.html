@@ -4,18 +4,16 @@
             <template if:true={showIcon}>
                 <lightning-icon icon-name={selectedIcon}></lightning-icon>
             </template> 
-            {iconName}
+            Level One
         </h1>
-        <div slot="footer">
-                <lightning-badge label="Tag1"></lightning-badge>
-                <lightning-badge label="Tag2"></lightning-badge>
-                <lightning-badge label="Tag3"></lightning-badge>
-        </div>
         
         <p class="slds-p-horizontal_small">showIcon = {showIcon}</p>
         <p class="slds-p-horizontal_small">selectedIcon = {selectedIcon}</p>
         <p class={colorspec}>{whatColor}</p>
-        <p class="slds-p-horizontal_small">{whichObject}</p>
+        <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
+        <p class="slds-p-horizontal_small">recordId: {recordId}</p>
     </lightning-card>
+
+    
     
 </template>
