@@ -11,7 +11,7 @@ export default class LevelTwo extends LightningElement {
         return this.whatColor.toLowerCase();
     }
 
-    get hasRecordId(){
+    get isRecordPage(){
         return this.recordId.length > 0;
     }
 
