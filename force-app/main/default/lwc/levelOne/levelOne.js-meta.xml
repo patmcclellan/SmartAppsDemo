@@ -2,7 +2,7 @@
 <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="levelOne">
     <apiVersion>45.0</apiVersion>
     <isExposed>true</isExposed>
-    <masterLabel>Level One</masterLabel>
+    <masterLabel>Proton Text Skeleton</masterLabel>
     
     <targets>
         <target>lightning__AppPage</target>
