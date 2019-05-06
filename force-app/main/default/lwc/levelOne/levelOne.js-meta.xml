@@ -1,0 +1,21 @@
+<!-- More info at https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.use_config_for_app_builder -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="levelOne">
+    <apiVersion>45.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Proton Blaster</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__RecordPage, lightning__AppPage, lightning__HomePage">
+            <property name="showIcon" label="Show Icon" type="Boolean" default="true"/>
+            <property name="iconName" label="Icon Name" type="String" datasource="Address, Avatar, Event, Order" default="Address"/>
+            <property name="whatColor" label="Color Block" type="String" datasource="Blue, Yellow, Green, Purple" default="Blue"/>
+            <property name="whichObject" label="Object Link" type="String" datasource="apex://LinkedObjectList" default="None"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

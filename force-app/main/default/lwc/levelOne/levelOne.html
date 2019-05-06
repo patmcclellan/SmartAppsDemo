@@ -1,0 +1,18 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <template if:true={showIcon}>
+                <lightning-icon icon-name={selectedIcon} size="large"></lightning-icon>
+            </template> 
+            {iconName}
+        </h3>
+        <div slot="footer">
+                <lightning-badge label="Tag1"></lightning-badge>
+                <lightning-badge label="Tag2"></lightning-badge>
+                <lightning-badge label="Tag3"></lightning-badge>
+        </div>
+        <p class="slds-p-horizontal_small">{whatColor}</p>
+        <p class="slds-p-horizontal_small">{whichObject}</p>
+    </lightning-card>
+    
+</template>
