@@ -13,7 +13,7 @@
         <p class="slds-p-horizontal_small">Object Link: {whichObject}</p>
         <p class="slds-p-horizontal_small">recordId: {recordId}</p>
 
-        <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo}></lightning-button>
+        <lightning-button name="showLevelTwo" label="Level 2" variant="brand" onclick={toggleLevelTwo} class="slds-float_right"></lightning-button>
         
         <template if:true={showLevelTwo}>
             <c-level-two
