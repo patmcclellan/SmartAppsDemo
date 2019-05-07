@@ -43,7 +43,7 @@ export default class LevelOne extends LightningElement {
                 if(event.shiftKey && event.metaKey){
                     event.preventDefault();
                     this.toggleShowKeycodes();
-                    this.keys = '⇧-⌘-k'
+                    this.keys = '⇧-⌘-K'
                 }
                 break;
             case 50: // 2 key
