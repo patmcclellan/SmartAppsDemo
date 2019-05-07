@@ -4,11 +4,12 @@
             Conversation List Component
         </h1>
         <div class="slds-p-around_small">
-            <p>This component doesn't display the talk bubble color or the Tab label, it just passes them through to nested components.</p>
-            <br/>
             <template if:true={isRecordPage}>
                 <p>The component receives recordId ({recordId}) from its parent, and uses it in a call to Apex to get related conversations. </p>
+                <br/>
             </template>
+            <p>This component doesn't display the talk bubble color or the Tab label, it just passes them through to nested components.</p>
+            
         </div>
 
         <lightning-button name="showLevelThree" label="Nested Components Level 3" onclick={toggleLevelThree} class="slds-p-around_small"></lightning-button>
