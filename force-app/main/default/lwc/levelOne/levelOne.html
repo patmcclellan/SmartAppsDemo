@@ -32,17 +32,19 @@
         </div>
         
         <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
-        <lightning-accordion active-section-name="Level 2">
+        <lightning-accordion active-section-name="A">
+            <lightning-accordion-section active-section-name="Level 2">
 
-            <!-- <template if:true={showLevelTwo}> -->
-                <div class="slds-p-around_small">
-                    <c-level-two
-                        record-id={recordId}
-                        what-color={whatColor}
-                        which-object={whichObject}>
-                    </c-level-two>
-                </div>  
-            <!-- </template> -->
+                <!-- <template if:true={showLevelTwo}> -->
+                    <div class="slds-p-around_small">
+                        <c-level-two
+                            record-id={recordId}
+                            what-color={whatColor}
+                            which-object={whichObject}>
+                        </c-level-two>
+                    </div>  
+                <!-- </template> -->
+            </lightning-accordion-section>
         </lightning-accordion>
     </lightning-card>
     
