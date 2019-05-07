@@ -19,7 +19,7 @@ export default class LevelThree extends LightningElement {
             case "Blue":
                 return "talk-bubble-in round left-top shadow tri-right-Blue protonLightBlue";
             case "Yellow":
-                return "talk-bubble-in round left-top shadow tri-right-Yello protonLightYellow";
+                return "talk-bubble-in round left-top shadow tri-right-Yellow protonLightYellow";
             case "Green":
                 return "talk-bubble-in round left-top shadow tri-right-Green protonLightGreen";
             case "Purple":
