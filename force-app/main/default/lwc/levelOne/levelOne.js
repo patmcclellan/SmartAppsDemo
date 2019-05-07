@@ -47,10 +47,10 @@ export default class LevelOne extends LightningElement {
                 }
                 break;
             case 50: // 2 key
-                if(event.metaKey){
+                if(event.shiftKey && event.metaKey){
                     event.preventDefault();
                     this.toggleLevelTwo();
-                    this.keys = '⌘-2'
+                    this.keys = '⇧-⌘-2'
                 }
                 break;
             default:
