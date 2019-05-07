@@ -31,6 +31,12 @@
                 <p>The component also receives recordId ({recordId}), and cascades it down through nested components. </p>
             </template>
         </div>
+
+        <template if:true={showKeycodes}>
+            <div class="slds-p-around_small">
+                Keys: {keys}
+            </div>
+        </template>
         
         <lightning-button name="showLevelTwo" label="Nested Component Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
             <template if:true={showLevelTwo}>

@@ -9,6 +9,14 @@ export default class LevelOne extends LightningElement {
     @api whichObject;
 
     @track showLevelTwo = false;
+    @track showKeycodes = false;
+    @track keys = '';
+
+    // set up key listener
+    constructor() {
+        super();
+        this.template.addEventListener('keydown', this.shortcuts.bind(this));
+    }
 
     get colorspec(){
         return this.whatColor.toLowerCase();
@@ -20,6 +28,32 @@ export default class LevelOne extends LightningElement {
 
     toggleLevelTwo(){
         this.showLevelTwo = !this.showLevelTwo;
+    }
+
+    toggleShowKeycodes(){
+        this.showKeycodes = !this.showKeycodes;
+    }
+
+    // KEYBOARD SHORTCUTS
+    shortcuts(event){
+        const keycode = event.keyCode;
+        switch(keycode) {
+            case 75: // k key
+                if(event.metaKey){
+                    event.preventDefault();
+                    this.toggleShowKeycodes();
+                    this.keys = '⌘-k'
+                }
+                break;
+            case 50: // 2 key
+                if(event.metaKey){
+                    event.preventDefault();
+                    this.toggleLevelTwo();
+                    this.keys = '⌘-2'
+                }
+                break;
+            default:
+        }
     }
     
 }

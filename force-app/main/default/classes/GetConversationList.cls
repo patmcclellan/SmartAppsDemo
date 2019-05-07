@@ -8,7 +8,7 @@
 public with sharing class GetConversationList
 {
     @AuraEnabled
-    public static List<ConversationWrapper> getConversationList(String recordId, String ConversationSharing)
+    public static List<Conversation__c> getConversationList(String recordId, String ConversationSharing)
     {
         if(!Conversation__c.SObjectType.getDescribe().isAccessible()) {
             return null;
@@ -28,9 +28,6 @@ public with sharing class GetConversationList
             } else if (recordId.left(3) == Schema.SObjectType.Account.getKeyPrefix()) // it's an Account record
             {
                 Conversations = getConversationsAccountId(recordId, ConversationSharing);
-            } else if (recordId.left(3) == Schema.SObjectType.Conversation__c.getKeyPrefix()) // it's a Conversation record
-            {
-                Conversations = getConversationsConvId(recordId);
             } else
             {   // get the name and type of the sObject represented by the recordId
                 Schema.SObjectType sObjType = Id.valueOf(recordId).getSObjectType();
@@ -45,12 +42,12 @@ public with sharing class GetConversationList
                     Conversations = getRelatedConversations(recordId, ConversationSharing);
                 }
             }
-            return wrapConversations(Conversations);
+            return Conversations;
         }
     }
 
     @AuraEnabled
-    public static List<ConversationWrapper> searchConversationList(String searchKey, String ConversationSharing)
+    public static List<Conversation__c> searchConversationList(String searchKey, String ConversationSharing)
     {
         System.debug('searchConversationList ' + searchKey + ' ' + ConversationSharing);
         if(!Conversation__c.SObjectType.getDescribe().isAccessible()) {
@@ -59,8 +56,7 @@ public with sharing class GetConversationList
             Id OwnerId = UserInfo.getUserId();
             String name = '\'%' + searchKey + '%\'';
             List<Conversation__c> Conversations = new List<Conversation__c>();
-            Conversations = getConversationsLikeName(name, ConversationSharing);
-            return wrapConversations(Conversations);
+            return getConversationsLikeName(name, ConversationSharing);
         }
     }
 
@@ -71,15 +67,7 @@ public with sharing class GetConversationList
     {
         System.debug('🍉 WhereAnd: ' + WhereAnd);
         String qr =
-                'SELECT  Id, GroupInits__c, Unread__c, LastMessageReceived__c, Broadcast__c, FirstName__c, ' +
-                        'Group_Name__c, OwnerId, PrimaryUser__c, Owner.FirstName, LastFromInits__c, ' +
-                        'LastModifiedDate, PrimaryUserInits__c, LastMessageDate__c, ' +
-                        'Asset__c, Asset__r.Name, ' +
-                        'Campaign__c, Campaign__r.Name, Case__c, Case__r.Subject, ' + 
-                        'Contract__c, Contract__r.ContractNumber, Opportunity__c, ' +
-                        'Order__c, Order__r.Name, Order__r.OrderNumber, Product2__c, Product2__r.Name, ' + 
-                        'Opportunity__r.Name, Link1__c, Link2__c, ' + 
-                        'Record1__c, Record2__c, Record1Name__c, Record2Name__c, OurFromNumber__c ' +
+                'SELECT  Id '+ // [long list of fields]  
                 'FROM Conversation__c ' +
                 WhereAnd +
                 ' ORDER BY LastMessageDate__c DESC'
@@ -376,53 +364,6 @@ public with sharing class GetConversationList
                 'AND Group_Name__c LIKE '+ name; 
         }
         return makeQuery(WhereAnd);  
-    }
-
-    private static List<ConversationWrapper> wrapConversations(List<Conversation__c> Conversations)
-    {
-        ConversationWrapper[] ConversationWrapperList = new List<ConversationWrapper>();
-            for (Conversation__c conv : Conversations)
-            {
-                ConversationWrapper cw = new ConversationWrapper();
-                cw.Id = conv.Id;
-                cw.Broadcast = conv.Broadcast__c;
-                cw.GroupInits = conv.GroupInits__c;
-                cw.Unread = conv.Unread__c;
-                cw.LastMessageReceived = conv.LastMessageReceived__c;
-                cw.FirstName = conv.FirstName__c;
-                cw.Group_Name = conv.Group_Name__c;
-                cw.OwnerId = conv.OwnerId;
-                cw.OwnerFirstName = conv.Owner.FirstName;
-                cw.PrimaryUser = conv.PrimaryUser__c;
-                cw.LastFromInits = conv.LastFromInits__c;
-                cw.LastModifiedDate = conv.LastModifiedDate;
-                cw.LastMessageDate = conv.LastMessageDate__c;
-                cw.PrimaryUserInits = conv.PrimaryUserInits__c;
-                cw.AssetId = conv.Asset__c;
-                cw.AssetName = conv.Asset__r.Name;
-                cw.CampaignId = conv.Campaign__c;
-                cw.CampaignName = conv.Campaign__r.Name;
-                cw.CaseId = conv.Case__c;
-                cw.CaseSubject = conv.Case__r.Subject;
-                cw.ContractId = conv.Contract__c;
-                cw.ContractNumber = conv.Contract__r.ContractNumber;
-                cw.OpportunityId = conv.Opportunity__c;
-                cw.OpportunityName = conv.Opportunity__r.Name;
-                cw.OrderId = conv.Order__c;
-                cw.OrderName = conv.Order__r.Name;
-                cw.OrderNumber = conv.Order__r.OrderNumber;
-                cw.Product2Id = conv.Product2__c;
-                cw.Product2Name = conv.Product2__r.Name;
-                cw.Link1 = conv.Link1__c;
-                cw.Record1 = conv.Record1__c;
-                cw.Record1Name = conv.Record1Name__c;
-                cw.Link2 = conv.Link2__c;
-                cw.Record2 = conv.Record2__c;
-                cw.Record2Name = conv.Record2Name__c;
-                cw.OurFromNumber = conv.OurFromNumber__c;
-                ConversationWrapperList.add(cw);
-            }
-            return ConversationWrapperList;
     }
 
     private static String getPhoneNumber()
