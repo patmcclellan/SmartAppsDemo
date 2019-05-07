@@ -7,7 +7,7 @@
             </template> 
             Proton Text Container Component
         </h1>
-        
+
         <h3 class="slds-p-horizontal_small">Admin Config Settings</h3>
         <lightning-layout horizontal-align="spread" class="slds-p-around_small">
             <lightning-layout-item class={colorspec}>
@@ -32,17 +32,18 @@
         </div>
         
         <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
-        
-        <template if:true={showLevelTwo}>
-            <div class="slds-p-around_small">
-                <c-level-two
-                    record-id={recordId}
-                    what-color={whatColor}
-                    which-object={whichObject}>
-                </c-level-two>
-            </div>
-            
-        </template>
+        <lightning-accordion active-section-name="Level 2">
+
+            <!-- <template if:true={showLevelTwo}> -->
+                <div class="slds-p-around_small">
+                    <c-level-two
+                        record-id={recordId}
+                        what-color={whatColor}
+                        which-object={whichObject}>
+                    </c-level-two>
+                </div>  
+            <!-- </template> -->
+        </lightning-accordion>
     </lightning-card>
     
 </template>
