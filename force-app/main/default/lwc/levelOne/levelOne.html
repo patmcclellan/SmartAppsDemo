@@ -32,19 +32,15 @@
         </div>
         
         <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
-        <lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection} active-section-name=''>
-            <lightning-accordion-section name="level2" label="Nested Component, Level 2">
-                <!-- <template if:true={showLevelTwo}> -->
-                    <div class="slds-p-around_small">
-                        <c-level-two
-                            record-id={recordId}
-                            what-color={whatColor}
-                            which-object={whichObject}>
-                        </c-level-two>
-                    </div>  
-                <!-- </template> -->
-            </lightning-accordion-section>
-        </lightning-accordion>
+            <template if:true={showLevelTwo}>
+                <div class="slds-p-around_small">
+                    <c-level-two
+                        record-id={recordId}
+                        what-color={whatColor}
+                        which-object={whichObject}>
+                    </c-level-two>
+                </div>  
+            </template>
     </lightning-card>
     
 </template>
