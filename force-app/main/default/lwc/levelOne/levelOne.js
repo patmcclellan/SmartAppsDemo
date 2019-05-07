@@ -37,15 +37,18 @@ export default class LevelOne extends LightningElement {
     }
 
     // KEYBOARD SHORTCUTS
+    // get keyCodes at https://keycode.info/
     shortcuts(event){
         const keycode = event.keyCode;
         switch(keycode) {
             case 75: // k key
                 if(event.shiftKey && event.metaKey){
+                    //start by preventing the default action
                     event.preventDefault();
                     this.toggleShowKeycodes();
                     this.keys = '⇧-⌘-K'
                 }
+                // now break so that the rest of the code doesn't execute
                 break;
             case 50: // 2 key
                 if(event.shiftKey && event.metaKey){
