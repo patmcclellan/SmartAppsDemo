@@ -40,7 +40,7 @@ export default class LevelOne extends LightningElement {
         const keycode = event.keyCode;
         switch(keycode) {
             case 75: // k key
-                if(event.shiftKeyKey && event.metaKey){
+                if(event.shiftKey && event.metaKey){
                     event.preventDefault();
                     this.toggleShowKeycodes();
                     this.keys = '⇧-⌘-k'
