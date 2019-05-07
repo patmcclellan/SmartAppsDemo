@@ -31,7 +31,7 @@
             </template>
         </div>
         
-        <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
+        <lightning-button name="showLevelTwo" label="Nested Component Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
             <template if:true={showLevelTwo}>
                 <div class="slds-p-around_small">
                     <c-level-two
