@@ -3,11 +3,21 @@
         <h1 class="slds-p-bottom_medium">
             Message Display Component
         </h1>
-        <div class={talkbubble}>
+        <lightning-layout vertical-align="start">
+            <lightning-layout-item>
+                <lightning-icon icon-name="utility-user"></lightning-icon>
+            </lightning-layout-item>
+            <lightning-layout-item class={talkbubble}>
+                <p class="talktext">
+                    This component receives the talk bubble color and uses it to call the appropriate css classes for display.
+                </p>
+            </lightning-layout-item>
+        </lightning-layout>
+        <!-- <div class={talkbubble}>
             <p class="talktext">
                 This component receives the talk bubble color and uses it to call the appropriate css classes for display.
             </p>
-        </div>
+        </div> -->
     </div>
     <br/>
     <div title="NewConversation" class="slds-box slds-theme_default">
