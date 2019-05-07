@@ -7,7 +7,7 @@
             </template> 
             Proton Text Container Component
         </h1>
-        <div class="slds-p-around_small">
+        <div class="slds-p-horizontal_small">
             <p>This component receives the admin's configuration settings via @api decorated variables, but doesn't display them; it just passes them down to nested components.</p>
             <br/>
             <template if:true={isRecordPage}>
@@ -15,7 +15,7 @@
             </template>
         </div>
         <h3 class="slds-p-around_small">Admin Config Settings</h3>
-        <lightning-layout horizontal-align="spread" class="slds-p-around_small">
+        <lightning-layout horizontal-align="spread" class="slds-p-horizontal_small">
             <lightning-layout-item class={colorspec}>
                 {whatColor}
             </lightning-layout-item>
