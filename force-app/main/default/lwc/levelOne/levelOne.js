@@ -2,6 +2,8 @@ import { LightningElement, api, track } from 'lwc';
 
 export default class LevelOne extends LightningElement {
     @api recordId; 
+    
+    //configuration options
     @api showIcon;
     @api whatColor;
     @api whichObject;
