@@ -11,7 +11,7 @@ export default class LevelOne extends LightningElement {
     @track showLevelTwo = false;
     @track showKeycodes = false;
     @track keys = '';
-    @track whichIcon = 'custom:custom5'
+    @track whichIcon = 'custom:custom5';
 
 
     get colorspec(){
