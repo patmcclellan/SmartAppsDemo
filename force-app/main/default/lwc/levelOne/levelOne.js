@@ -34,7 +34,7 @@ export default class LevelOne extends LightningElement {
     // docs here: https://developer.salesforce.com/docs/component-library/documentation/lwc/lwc.events_handling
     constructor() {
         super();
-        this.addEventListener('keydown', this.shortcuts.bind(this));
+        this.template.addEventListener('keydown', this.shortcuts.bind(this));
         // discussion of keydown vs keyup vs keypress can be found here:
         // https://stackoverflow.com/questions/3396754/onkeypress-vs-onkeyup-and-onkeydown
     }
