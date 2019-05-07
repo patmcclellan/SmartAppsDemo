@@ -11,6 +11,7 @@ export default class LevelOne extends LightningElement {
     @track showLevelTwo = false;
     @track showKeycodes = false;
     @track keys = '';
+    @track whichIcon = 'custom:custom5'
 
 
     get colorspec(){
@@ -51,6 +52,27 @@ export default class LevelOne extends LightningElement {
                     event.preventDefault();
                     this.toggleLevelTwo();
                     this.keys = '⇧-⌘-2'
+                }
+                break;
+            case 73: // I key
+                if(event.shiftKey && event.metaKey){
+                    event.preventDefault();
+                    this.whichIcon = 'custom:custom1';
+                    this.keys = '⇧-⌘-I'
+                }
+                break;
+            case 79: // O key
+                if(event.shiftKey && event.metaKey){
+                    event.preventDefault();
+                    this.whichIcon = 'custom:custom10';
+                    this.keys = '⇧-⌘-O'
+                }
+                break;
+            case 80: // P key
+                if(event.shiftKey && event.metaKey){
+                    event.preventDefault();
+                    this.whichIcon = 'custom:custom12';
+                    this.keys = '⇧-⌘-P'
                 }
                 break;
             default:

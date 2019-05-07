@@ -33,9 +33,14 @@
         </div>
 
         <template if:true={showKeycodes}>
-            <div class="slds-p-around_small">
-                Keys: {keys}
-            </div>
+            <lightning-layout horizontal-align="spread" class="slds-p-around_small">
+                <lightning-layout-item>
+                    Keys: {keys}
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <lightning-icon icon-name={whichIcon}></lightning-icon>
+                </lightning-layout-item>
+            </lightning-layout>
         </template>
         
         <lightning-button name="showLevelTwo" label="Nested Component Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
