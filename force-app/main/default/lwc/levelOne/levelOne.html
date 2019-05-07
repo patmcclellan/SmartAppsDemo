@@ -27,7 +27,7 @@
             <p>This component receives the admin's configuration settings via @api decorated variables, but doesn't display them; it just passes them down to nested components.</p>
             <br/>
             <template if:true={isRecordPage}>
-                <p>The component also receives recordId ({recordId}), and passes it down to nested components. </p>
+                <p>The component also receives recordId ({recordId}), and cascades it down through nested components. </p>
             </template>
         </div>
         
