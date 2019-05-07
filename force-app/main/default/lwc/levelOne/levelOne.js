@@ -22,9 +22,4 @@ export default class LevelOne extends LightningElement {
         this.showLevelTwo = !this.showLevelTwo;
     }
     
-    handleToggleSection(){
-
-    }
-
-
 }

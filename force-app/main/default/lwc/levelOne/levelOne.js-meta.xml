@@ -12,17 +12,19 @@
 
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage, lightning__AppPage, lightning__HomePage">
-            <property   name="showIcon" 
+            <property   name="showIcon"   
                         label="Show Icon" 
                         type="Boolean" 
                         default="true"
                         description="This is a checkbox"/>
+
             <property   name="whatColor" 
                         label="Talk Bubble Color" 
                         type="String" 
                         datasource="Blue, Yellow, Green, Purple" 
                         default="Blue"
                         description="This is a fixed picklist"/>
+                        
             <property   name="whichObject" 
                         label="Object" 
                         type="String" 
