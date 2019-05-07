@@ -32,9 +32,8 @@
         </div>
         
         <lightning-button name="showLevelTwo" label="Level 2" onclick={toggleLevelTwo} class="slds-p-around_small"></lightning-button>
-        <lightning-accordion active-section-name="A">
-            <lightning-accordion-section active-section-name="Level 2">
-
+        <lightning-accordion class="example-accordion" onsectiontoggle={handleToggleSection}>
+            <lightning-accordion-section name="level2" label="Nested Component, Level 2">
                 <!-- <template if:true={showLevelTwo}> -->
                     <div class="slds-p-around_small">
                         <c-level-two
