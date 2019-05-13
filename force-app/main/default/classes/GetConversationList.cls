@@ -16,7 +16,7 @@ public with sharing class GetConversationList
         {
             List<Conversation__c> Conversations = new List<Conversation__c>();
             if (recordId == null) { //it's a home page
-                Conversations = getConversationsNoRecordId(ConversationSharing);
+                Conversations = getConversationsNoRecordId(ConversationSharing); // line 144
             } 
             // check for situations where the recordId is the recipient (Contact, Lead, Account)
               else if (recordId.left(3) == Schema.SObjectType.Contact.getKeyPrefix()) // it's a contact record

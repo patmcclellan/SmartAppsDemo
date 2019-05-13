@@ -7,6 +7,10 @@ export default class LevelTwo extends LightningElement {
 
     @track showLevelThree = false;
 
+    // in the Proton Text app, the ConversationFeed component
+    // accepts the recordId from its parent component and calls
+    // Apex GetConversationList(), passing along the recordId
+
     get colorspec(){
         return this.whatColor.toLowerCase();
     }
@@ -18,8 +22,4 @@ export default class LevelTwo extends LightningElement {
     toggleLevelThree(){
         this.showLevelThree = !this.showLevelThree;
     }
-
-
-
-
 }
