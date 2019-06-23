@@ -29,7 +29,7 @@
             <lightning-tab label={whichObject}>
                 <div class="slds-p-around_small">
                     <template if:true={isRecordPage}>
-                        <p>This component receives the Tab label ({whichObject}) to display above, and the recordId ({recordId}) to call Apex to return related object records.</p>
+                        <p>This component receives the Tab label ({whichObject}) to display above, and the <span class='boldtext'>recordId: {recordId}</span> to call Apex to return related object records.</p>
                     </template>
                     <template if:false={isRecordPage}>
                         <p>This component receives the Tab label ({whichObject}) to display above.</p>

@@ -32,3 +32,8 @@
     color: white;
     background-color: purple;
 }
+
+.boldtext {
+    font-weight: bold;
+    color: red;
+}

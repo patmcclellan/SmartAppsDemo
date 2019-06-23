@@ -33,6 +33,11 @@
     background-color: purple;
 }
 
+.boldtext {
+    font-weight: bold;
+    color: red;
+}
+
 .talk-bubble-in {
     margin-left: 7px; /*positions bubble to the left*/
     margin-bottom: 1.5em; /*puts space between bubbles*/

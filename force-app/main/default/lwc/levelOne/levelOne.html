@@ -18,7 +18,7 @@
                 </lightning-layout-item>
                 <lightning-layout-item>
                     <template if:true={isRecordPage}>
-                        recordId: {recordId}
+                        <span class='boldtext'>recordId: {recordId}</span>
                     </template>
                 </lightning-layout-item>
             </lightning-layout>
@@ -28,7 +28,7 @@
             <p>This component receives the admin's configuration settings via @api decorated properties, but doesn't display them; it just passes them down to nested components.</p>
             <br/>
             <template if:true={isRecordPage}>
-                <p>The component also receives recordId ({recordId}), and cascades it down through nested components. </p>
+                <p>The component also receives <span class='boldtext'>recordId: {recordId}</span>, and cascades it down through nested components. </p>
             </template>
         </div>
 

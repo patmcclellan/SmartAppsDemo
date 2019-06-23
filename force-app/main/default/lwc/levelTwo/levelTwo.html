@@ -5,7 +5,7 @@
         </h1>
         <div class="slds-p-around_small">
             <template if:true={isRecordPage}>
-                <p>The component receives recordId ({recordId}) from its parent, and uses it in a call to Apex to get related conversations. </p>
+                <p>The component receives <span class='boldtext'>recordId: {recordId}</span> from its parent, and uses it in a call to Apex to get related conversations. </p>
                 <br/>
             </template>
             <p>This component doesn't display the talk bubble color or the Tab label, it just passes them through to nested components.</p>
